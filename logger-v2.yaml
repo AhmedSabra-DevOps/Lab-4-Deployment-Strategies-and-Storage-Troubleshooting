@@ -19,7 +19,7 @@ spec:
       - name: logger
         image: busybox:latest
         command: ["/bin/sh", "-c"]
-        # تم تصحيح المسار ليكون داخل /var/log/app ليتطابق مع الـ Volume
+  
         args:
         - "while true; do echo $(date) - Host: $(hostname) >> /var/log/app/output.txt; sleep 10; done"
         volumeMounts:
